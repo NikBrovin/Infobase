@@ -110,6 +110,49 @@ def taskmanager(fname):
      print(b, c, a)
      print(c, a, b)
      print (c,b,a)
+   if fname == "19":
+     A = int(input("введите число\n"))
+     a = str(int((A-(A//1000*100019)-A%100)/100))
+     b = str(int((A%100-A%10)/10))
+     c = str(int(A%10))
+     v = str(int((A-A %100)/1000))
+     print("цифра в позиции тысяч равна",v)
+     print("цифра в позиции сотен равна", a)
+     print("цифра в позиции десятков равна", b)
+     print("цифра в позиции единиц равна", c)
+ if fname == "20":
+     a = input("пороль\n")
+     b = input("повторите пороль\n")
+     if a == b:
+         print("пороль введен правильно")
+     else:
+         print("пороль введен не верно")
+ if fname == "21":
+     a = int(input("число\n"))
+     if a % 2 == 1:
+        str(a // 2 + 1)
+        print ("не четное")
+     if a % 2 == 0:
+        str(a // 2)
+        print("четное")
+ if fname == "22":
+     A = int(input("введите число\n"))
+     v = (int((A - A % 100) / 1000))
+     a = (int((A - (A // 1000 * 1000) - A % 100) / 100))
+     b = (int((A % 100 - A % 10) / 10))
+     c = (int(A % 10))
+     B = v+c
+     C = a-b
+     if B == C:
+         print("да")
+     else:
+         print("нет")
+ if fname == "23":
+     a = int(input("возраст\n"))
+     if a >= 18:
+         print("Доступ разрешен")
+     else:
+         print("Доступ запрещен")
 taskname = input("Какую функцию запустить?\n")
 taskmanager(taskname)
 
